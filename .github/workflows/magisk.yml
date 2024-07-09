@@ -140,7 +140,8 @@ jobs:
           import zipfile
           import os
           import urllib.request
-
+          
+          urllib3.disable_warnings()
           arch = "${{ matrix.arch }}"
 
           #release_type_map = {"retail": "Retail", "release preview": "RP", "insider slow": "WIS", "insider fast": "WIF"}
